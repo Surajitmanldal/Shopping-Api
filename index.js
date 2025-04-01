@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 // Route to get all items
 app.get('/items', async (req, res) => {
   const storedItems = await getStoredItems();
-  await new Promise((resolve) => setTimeout(() => resolve(), 2000));  // Simulate a delay
+  // await new Promise((resolve) => setTimeout(() => resolve(), 2000));  // Simulate a delay
   res.json({ items: storedItems });
 });
 
